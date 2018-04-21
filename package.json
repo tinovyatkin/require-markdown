@@ -1,0 +1,55 @@
+{
+  "name": "require-markdown",
+  "description": "Loads Markdown files as compiled HTML string synchronously (as Node require)",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinovyatkin/require-markdown.git"
+  },
+  "author": "Tino Vyatkin <tino@vtkn.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tinovyatkin/require-markdown/issues"
+  },
+  "homepage": "https://github.com/tinovyatkin/require-markdown#readme",
+  "devDependencies": {
+    "@destinationstransfers/eslint-config": "latest",
+    "eslint": "latest",
+    "eslint-plugin-node": "latest",
+    "jest": "latest"
+  },
+  "directories": {
+    "test": "__tests__"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "eslintConfig": {
+    "plugins": [
+      "node"
+    ],
+    "extends": [
+      "@destinationstransfers",
+      "plugin:node/recommended"
+    ],
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "script"
+    }
+  },
+  "dependencies": {
+    "markdown-it": "^8.4.1",
+    "markdown-it-emoji": "^1.4.0"
+  }
+}
