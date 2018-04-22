@@ -2,14 +2,15 @@
 
 exports[`require-markdown load README 1`] = `
 "<h1>require-markdown</h1>
-<p>Loads Markdown files as compiled HTML string synchronously (as Node require)</p>
+<p>Loads Markdown files as compiled HTML string synchronously (as Node <code>require</code>)</p>
 <h2>Motivation</h2>
-<p>This module suppose to be used in build systems, etc, where you prefer to store texts as Markdown files. Uses <em>markdown-it</em> for rendering with emoji plugin enabled</p>
+<p>This module suppose to be used in build systems, etc, where you prefer to store texts as Markdown files. Uses <a href=\\"https://github.com/markdown-it/markdown-it\\">markdown-it</a> for rendering with emoji, subscript, superscript, comments stripping and abbr plugins enabled.</p>
 <h2>Usage</h2>
-<pre><code class=\\"language-js\\">const requireMarkdown = require('require-markdown')(markdownItOptions = { typographer: true });
+<pre><code class=\\"language-js\\">const requireMarkdown = require(&quot;require-markdown&quot;)(
+  (markdownItOptions = { typographer: true })
+);
 
-const htmlString = requireMarkdown('../README.md'); // =&gt; '&lt;h1&gt;require-markdown&lt;/h1&gt;' ....
-
+const htmlString = requireMarkdown(&quot;../README.md&quot;); // =&gt; '&lt;h1&gt;require-markdown&lt;/h1&gt;' ....
 </code></pre>
 "
 `;
