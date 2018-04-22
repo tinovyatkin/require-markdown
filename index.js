@@ -1,6 +1,7 @@
 'use strict';
 
 const abbr = require('markdown-it-abbr');
+const comments = require('markdown-it-inline-comments');
 const emoji = require('markdown-it-emoji');
 const markdownIt = require('markdown-it');
 const sub = require('markdown-it-sub');
@@ -12,6 +13,7 @@ const LINEFEED = '\n';
 
 module.exports = (markdownOptions = { typographer: true }) => {
   const md = markdownIt(markdownOptions)
+    .use(comments)
     .use(emoji)
     .use(sub)
     .use(sup)

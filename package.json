@@ -1,6 +1,7 @@
 {
   "name": "require-markdown",
-  "description": "Loads Markdown files as compiled HTML string synchronously (as Node require)",
+  "description":
+    "Loads Markdown files as compiled HTML string synchronously (as Node require)",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -34,13 +35,8 @@
     "verbose": true
   },
   "eslintConfig": {
-    "plugins": [
-      "node"
-    ],
-    "extends": [
-      "@destinationstransfers",
-      "plugin:node/recommended"
-    ],
+    "plugins": ["node"],
+    "extends": ["@destinationstransfers", "plugin:node/recommended"],
     "env": {
       "node": true
     },
@@ -52,7 +48,9 @@
     "markdown-it": "^8.4.1",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-emoji": "^1.4.0",
+    "markdown-it-inline-comments": "^1.0.1",
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0"
-  }
+  },
+  "keywords": ["markdown", "markdown-it"]
 }
