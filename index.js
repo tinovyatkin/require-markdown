@@ -1,14 +1,21 @@
 'use strict';
 
+const abbr = require('markdown-it-abbr');
 const emoji = require('markdown-it-emoji');
 const markdownIt = require('markdown-it');
+const sub = require('markdown-it-sub');
+const sup = require('markdown-it-sup');
 const { readFileSync } = require('fs');
 const { resolve, dirname, isAbsolute } = require('path');
 
 const LINEFEED = '\n';
 
 module.exports = (markdownOptions = { typographer: true }) => {
-  const md = markdownIt(markdownOptions).use(emoji);
+  const md = markdownIt(markdownOptions)
+    .use(emoji)
+    .use(sub)
+    .use(sup)
+    .use(abbr);
   return path => {
     // reading file
     const content = readFileSync(
