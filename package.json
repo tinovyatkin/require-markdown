@@ -1,7 +1,7 @@
 {
   "name": "require-markdown",
   "description": "Loads Markdown files as compiled HTML string synchronously (as Node require)",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "scripts": {
     "test": "c8 --reporter=lcov --reporter=text node --test __tests__/*.test.js",
