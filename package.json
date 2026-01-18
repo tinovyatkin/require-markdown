@@ -1,13 +1,17 @@
 {
   "name": "require-markdown",
   "description": "Loads Markdown files as compiled HTML string synchronously (as Node require)",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "c8 --reporter=lcov --reporter=text node --test __tests__/*.test.js",
+    "test:update-snapshots": "SNAP_UPDATE=1 node --test __tests__/*.test.js",
+    "lint": "oxlint",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check ."
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=20"
   },
   "files": [
     "index.js"
@@ -23,41 +27,21 @@
   },
   "homepage": "https://github.com/tinovyatkin/require-markdown#readme",
   "devDependencies": {
-    "@destinationstransfers/eslint-config": "latest",
-    "eslint": "latest",
-    "eslint-plugin-node": "latest",
-    "jest": "latest"
+    "@matteo.collina/snap": "^0.3.0",
+    "c8": "^10.1.3",
+    "oxfmt": "^0.16.0",
+    "oxlint": "^0.17.0"
   },
   "directories": {
     "test": "__tests__"
   },
-  "jest": {
-    "collectCoverage": true,
-    "testEnvironment": "node",
-    "verbose": true
-  },
-  "eslintConfig": {
-    "plugins": [
-      "node"
-    ],
-    "extends": [
-      "@destinationstransfers",
-      "plugin:node/recommended"
-    ],
-    "env": {
-      "node": true
-    },
-    "parserOptions": {
-      "sourceType": "script"
-    }
-  },
   "dependencies": {
-    "markdown-it": "^11.0.0",
-    "markdown-it-abbr": "^1.0.4",
-    "markdown-it-emoji": "^1.4.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-emoji": "^3.0.0",
     "markdown-it-inline-comments": "^1.0.1",
-    "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0"
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0"
   },
   "keywords": [
     "markdown",
